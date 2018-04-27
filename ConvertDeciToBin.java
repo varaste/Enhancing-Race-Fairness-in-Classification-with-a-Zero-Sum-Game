@@ -1,5 +1,3 @@
-
-
 package convertdecitobin;
 
 import java.awt.Color;
@@ -11,7 +9,6 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-
 
 public class ConvertDeciToBin extends JFrame{
     
@@ -40,20 +37,15 @@ public class ConvertDeciToBin extends JFrame{
      double mul=0.0;
      double k;
      long inte;
-     
-    
+         
      String ret_bin="";
  
-   
-
+  
     public static void main(String[] args) {
         
         ConvertDeciToBin calc_bin=new ConvertDeciToBin();
-        calc_bin.screen();
-        
-          
+        calc_bin.screen();        
     }
-    
     
     //Method to render the screen
     public void screen(){
@@ -98,16 +90,12 @@ public class ConvertDeciToBin extends JFrame{
               }else{
                   out=binary(Double.valueOf(in));
                   output.setText(out);
-                  
               }
               
-
             }catch(NumberFormatException p){
             }
-
         }
-        
-        
+               
         });
         
         clear.addActionListener(new ActionListener(){
@@ -118,28 +106,18 @@ public class ConvertDeciToBin extends JFrame{
                 output.setText("");
                 window.repaint();
                 my_frac.clear();
-            }
-       
-        
-        });
+            } 
+       });
     
     }
     
-    
     //Method to convert input decimal into binary
-    public String binary(Double k){
-        
-        
-        
-        
+    public String binary(Double k){    
         if(k==0.0){
             ret_bin="0";
             return ret_bin;
         }else
-        
         mylist_bin=new ArrayList<>();
-        
-       
         
                i_bin=k;
         for(int l=0;l<999999999;l++){//loop over the largest integer possible
@@ -150,22 +128,16 @@ public class ConvertDeciToBin extends JFrame{
               if((v%2)!=0){
                    mylist_bin.add(one_bin);
                   
-                   
-               } else{
+              } else{
                    mylist_bin.add(zero_bin);
-               
-                   
-               }
-             
-                   
+                                  
+               }                                
                
                if(i_bin<=1){//break from loop when division is over
               
                   break; 
-               }               
-                
-        
-               
+               }                               
+                       
         }//End of for loop
         
          int w=mylist_bin.size();//get the size of the arraylist
@@ -173,8 +145,7 @@ public class ConvertDeciToBin extends JFrame{
                    
                    if((!"1".equals(gt))){
                        mylist_bin.set(w-1, "1");
-                       mylist_bin.add(0, "0");
-                       
+                       mylist_bin.add(0, "0");                     
                    }
         
         String a=mylist_bin.toString();
@@ -187,25 +158,20 @@ public class ConvertDeciToBin extends JFrame{
        
         
         return ret_bin+" ";
-        
-             
+                     
     }
-    
-    
+        
     //Method to perform fraction parts operation
     public String binary_frac(double v){
         
         v_universal=v;
         String zero="0";
         String one="1";
-  
-        
+         
         for(int y=0;y<999999999;y++){//loop over the largest integer possible
              mul=v_universal*2;
              inte=(long)mul;
-             
-            
-            
+                       
             if(inte==0){
                 my_frac.add(zero);
                 v_universal=mul;
@@ -216,8 +182,7 @@ public class ConvertDeciToBin extends JFrame{
               break;
               
             }
-             
-            
+                        
         }
         
          String a=my_frac.toString();
@@ -225,9 +190,7 @@ public class ConvertDeciToBin extends JFrame{
         a=a.replace("[","").replace("]", "").replace(",", "");
         
         con_fra=a;
-        return con_fra;
-        
-    }
-    
+        return con_fra;      
+    }    
 }
 
