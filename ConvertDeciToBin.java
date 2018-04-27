@@ -9,7 +9,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-
+//11
 public class ConvertDeciToBin extends JFrame{
     
     //Screen items
