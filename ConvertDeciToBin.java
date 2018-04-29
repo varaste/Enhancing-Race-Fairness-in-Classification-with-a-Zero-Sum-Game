@@ -9,10 +9,11 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-//11
+//12
 public class ConvertDeciToBin extends JFrame{
     
     //Screen items
+    
     JFrame window;
     JTextField input;
     JTextField output;
@@ -23,15 +24,18 @@ public class ConvertDeciToBin extends JFrame{
     JPanel innerwindow;
     
     //calculation variables
+    
      Double i_bin=0.0;//get i from user input
      ArrayList<String> mylist_bin;
      ArrayList<String> my_frac=new ArrayList<>();
-     String one_bin="1";
+ 
+     long integer_bin;
+       String one_bin="1";
      String zero_bin="0";
      String in;
      String con_fra="";
-     String out;
-     long integer_bin;
+     String out; 
+    
      double fraction_bin;
      double v_universal;
      double mul=0.0;
@@ -175,7 +179,6 @@ public class ConvertDeciToBin extends JFrame{
             if(inte==0){
                 my_frac.add(zero);
                 v_universal=mul;
-                
                 
             }else {
               my_frac.add(one);
