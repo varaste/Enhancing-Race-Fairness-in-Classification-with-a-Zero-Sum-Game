@@ -9,7 +9,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-//12
+//13
 public class ConvertDeciToBin extends JFrame{
     
     //Screen items
@@ -112,7 +112,6 @@ public class ConvertDeciToBin extends JFrame{
                 my_frac.clear();
             } 
        });
-    
     }
     
     //Method to convert input decimal into binary
@@ -122,7 +121,6 @@ public class ConvertDeciToBin extends JFrame{
             return ret_bin;
         }else
         mylist_bin=new ArrayList<>();
-        
                i_bin=k;
         for(int l=0;l<999999999;l++){//loop over the largest integer possible
             int v=i_bin.intValue();
