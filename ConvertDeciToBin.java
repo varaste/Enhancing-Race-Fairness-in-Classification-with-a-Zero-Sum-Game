@@ -114,7 +114,9 @@ public class ConvertDeciToBin extends JFrame{
        });
     }
     
-    //Method to convert input decimal into binary
+    
+    
+    //Method to convert input decimal into binary ---
     public String binary(Double k){    
         if(k==0.0){
             ret_bin="0";
